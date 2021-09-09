@@ -39,9 +39,6 @@ public class Enemy : MonoBehaviour
             }
             else
             {
-                // destroy the laser then self
-
-
                 Destroy(this.gameObject);
                 
             }
@@ -51,10 +48,9 @@ public class Enemy : MonoBehaviour
             Player player = other.transform.GetComponent<Player>();
             if (player != null)
             {
-                player.Damage(); // this is a method on the player script
-                Destroy(this.gameObject);
+                player.Damage();   
             }
-           
+           Destroy(this.gameObject);
         }
     }
 
